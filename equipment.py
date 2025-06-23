@@ -26,6 +26,9 @@ def equipment_window():
         values = tree.item(selected_item, 'values')
         eq_id = values[0]
 
+
+         
+        
         confirm = messagebox.askyesno("Confirm Delete", f"Delete equipment ID {eq_id}?")
         if confirm:
             conn = connect_db()
@@ -59,3 +62,5 @@ def equipment_window():
         tree.heading(col, text=col)
     tree.pack()
     refresh()
+
+
